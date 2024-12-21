@@ -1,0 +1,6 @@
+# ChatServerDemo和ChatClientDemo
+这是一款可以在局域网内在线聊天的应用
+ChatServerDemo是聊天软件的服务端，ChatClientDemo是聊天软件的客户端。
+先用命令行运行ChatServerDemo的jar文件，然后再双击ChatClientDemo的jar文件，
+登录账号为master，密码为123456， 然后在客户端输入IP地址和端口号，
+如果是本地的服务器，可以直接回车进入，就可以开始聊天了。
