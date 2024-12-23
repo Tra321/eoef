@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户中心</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/profile.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">首页</a>
+        <a href="attractions.html">景点列表</a>
+        <a href="profile.html">用户中心</a>
+        <a href="contact.html">联系我们</a>
+    </nav>
+    <main>
+        <section class="user-profile">
+            <h2>个人信息</h2>
+            <form id="profile-form">
+                <label for="name">用户名:</label>
+                <input type="text" id="name" value="">
+                <label for="email">邮箱:</label>
+                <input type="email" id="email" value="">
+                <button type="submit">保存信息</button>
+            </form>
+        </section>
+        <section class="booking-history">
+            <h2>预订历史</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>活动</th>
+                        <th>日期</th>
+                        <th>人数</th>
+                        <th>操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- 动态生成预订记录 -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+</body>
+</html> 

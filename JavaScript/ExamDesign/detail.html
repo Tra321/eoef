@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>景点详情</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/detail.js" defer></script>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="index.html">首页</a>
+        <a href="attractions.html">景点列表</a>
+        <a href="profile.html">用户中心</a>
+        <a href="contact.html">联系我们</a>
+    </nav>
+    <main>
+        <section class="attraction-detail">
+            <h1 class="attraction-name">景点名称</h1>
+            <img class="attraction-image" src="" alt="景点图片">
+            <p class="attraction-description">景点描述</p>
+        </section>
+        <section class="user-reviews">
+            <h2>用户评论</h2>
+            <ul class="review-list">
+                <!-- 动态生成评论列表 -->
+            </ul>
+            <form id="review-form">
+                <textarea id="review" placeholder="写下您的评论..."></textarea>
+                <button type="submit">提交评论</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html> 
