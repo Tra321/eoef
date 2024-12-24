@@ -93,6 +93,7 @@
 			</div>
 			<div class="rside">
 				<a href="https://baike.baidu.com/item/%E9%A9%AF%E9%BE%99%E9%AB%98%E6%89%8Blive%E7%A7%80/13334707?fr=ge_ala"><img src="img/制作团队.webp" alt=""></a>
+				<button id="scrollToTopBtn" style="display:none; position:fixed; bottom:20px; right:20px;">返回顶部</button>
 			</div>
 		</div>
 		<div class="footer">
@@ -103,6 +104,23 @@
 		// 页面加载时弹出欢迎消息
 		window.onload = function() {
 			alert('我们是驯龙高手的制作团队！');
+		};
+
+		var mybutton = document.getElementById("scrollToTopBtn");
+
+		// 当用户滚动到一定位置时，显示按钮
+		window.onscroll = function() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		};
+
+		// 当用户点击按钮时，滚动到顶部
+		mybutton.onclick = function() {
+			document.body.scrollTop = 0; // 对于 Safari
+			document.documentElement.scrollTop = 0; // 对于 Chrome, Firefox, IE 和 Opera
 		};
 	</script>
 </body>

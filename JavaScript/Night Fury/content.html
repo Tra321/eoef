@@ -95,6 +95,7 @@
 			<br>
 			<br>
 			<br>
+			<button id="scrollToTopBtn" style="display:none; position:fixed; bottom:20px; right:20px;">返回顶部</button>
 		</div>
 		<div class="footer">
 			<p>2340709202 &nbsp;&nbsp;吴必炜<br>计算机科学与技术专业</p>
@@ -104,6 +105,23 @@
 		// 页面加载时弹出欢迎消息
 		window.onload = function() {
 			alert('欢迎来了解我们！');
+		};
+
+		var mybutton = document.getElementById("scrollToTopBtn");
+
+		// 当用户滚动到一定位置时，显示按钮
+		window.onscroll = function() {
+			if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+				mybutton.style.display = "block";
+			} else {
+				mybutton.style.display = "none";
+			}
+		};
+
+		// 当用户点击按钮时，滚动到顶部
+		mybutton.onclick = function() {
+			document.body.scrollTop = 0; // 对于 Safari
+			document.documentElement.scrollTop = 0; // 对于 Chrome, Firefox, IE 和 Opera
 		};
 	</script>
 </body>
