@@ -10,8 +10,10 @@
 		background-image:url("img/微信图片_20231216231643.jpg");
 	}
 	@media screen and (max-width:700px) {
-		width: 100%;
-		margin: 0px;
+		.main{
+			width: 100%;
+			margin: 0px;
+		}
 	}
 </style>
 </head>
@@ -50,6 +52,11 @@
 				<div class="next">》</div>
 			</div>
 			<script>
+				// 页面加载时弹出欢迎消息
+        		window.onload = function() {
+            		alert('你好！欢迎来到主页！');
+        		};
+
 				var eprev = document.querySelector('.prev');
 				var enext = document.querySelector('.next');
 				var left = 0;
