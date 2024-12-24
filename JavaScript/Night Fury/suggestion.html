@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device, initial-scale=1.0">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/suggestion.css">
+<style>
+	.header{
+		background-image:url("img/微信图片_20231216231643.jpg");
+	}
+	@media screen and (max-width:700px) {
+		width: 100%;
+		margin: 0px;
+	}
+</style>
+</head>
+
+<body>
+	<div class="main">
+		<div class="header">
+		  <h1>驯龙高手</h1>
+		  <p><strong><em><a href="‌index.html">
+			  <img src="img/acff2e722ff0f6b4b2583bd8991b3a1.jpg" alt="" width="30"></a></em></strong></p>
+		</div>
+		<div class="nav">
+			<a href="‌index.html">首页</a>
+			<a href="produce.html">制作团队</a>
+		  	<a href="introduce.html">人物介绍</a>
+			<a href="content.html">相关内容</a>
+			<a href="suggestion.html">意见反馈</a>
+			<a href="‌index.html">返回</a>
+		</div>
+		<div class="container">
+			 <h2>意见反馈</h2><br>
+			<form  action="sendmail.php" method="post"> 
+				<div class="form-group">
+					<div>
+						<label for="name" class="form-label">&nbsp;姓名:</label>
+						<input type="text" id="name" class="form-input1"  placeholder="name" name="name" required><br> 
+						<label for="age" class="form-label">&nbsp;年龄:</label>
+						<input type="number" id="age" class="form-input1" placeholder="age" name="age">
+						<label for="num" class="form-label">&nbsp;电话号码:</label>
+						<input type="number" id="num" class="form-input1" placeholder="num" name="phone number">
+						<br>
+						</div>
+						<div>
+						<label for="message" class="form-label">&nbsp;意见反馈</label>
+							<textarea id="message" class="form-input3" name="message" required></textarea><br>
+						</div>
+						<label for="email" class="form-label">&nbsp;Email:</label> 
+						<input type="email" id="email" class="form-input1" placeholder="Enter your email" required name="email">  
+						<input type="submit" value="发送邮件">
+					 </div> 
+					 <button type="submit" class="form-submit">Submit</button> 
+					 <br>
+			<br>
+			<br>
+			<br>
+			<br> 
+			</form>
+		</div>
+		
+		<div class="footer">
+			<p>2340709202 &nbsp;&nbsp;吴必炜<br>计算机科学与技术专业</p>
+		</div>
+	</div>
+</body>
+</html>

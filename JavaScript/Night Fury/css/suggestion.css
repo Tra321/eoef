@@ -1,0 +1,79 @@
+@charset "utf-8";
+/* CSS Document */
+	*{
+		margin: 0;
+		padding: 0;
+		text-decoration: none;
+		list-style: none;
+	}
+	.main{
+		width: 1250px;
+		margin: auto;
+		}
+	.header,.nav,.container,.footter{
+		float: left;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	.header{
+		padding: 68px;
+		text-align: center;
+		color: #FFFFFF;
+		float: left;
+	}
+	.nav{
+		background: #333;
+		float: left;
+		position: relative;
+		top: -40px;
+		opacity: 0.5;
+	}
+	.nav a{
+		color: #fff;
+		padding: 10px 75px;
+		display: inline-block;
+	}
+	.nav a:hover{
+		background: #bbb;
+		color: #000;
+	}
+	.container{
+		text-align: center;
+		padding:px;
+	}
+	.form-group {
+        margin-bottom: 20px;
+    }
+    .form-label {
+        display: block;
+        margin-bottom: 5px;
+    }
+    .form-input1 {
+        width: 50%;
+        padding: 13px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+	.form-input3 {
+        width: 44%;
+        padding: 49px;
+        border: 1px solid #ccc;
+        border-radius: 5px;	
+	}
+    .form-submit {
+        width: 52.5%;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #007bff;
+        color: #fff;
+        cursor: pointer;
+    }
+    .form-submit:hover {
+        background-color: #0056b3;
+    }
+	.footer{
+		padding: 10px;
+		background: #ccc;
+		text-align:center;
+	}

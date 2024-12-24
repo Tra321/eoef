@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+	*{
+		margin: 0;
+		padding: 0;
+		text-decoration: none;
+		list-style: none;
+	}
+	.main{
+		width: 1250px;
+		margin: auto;
+		}
+	.header,.nav,.container,.footter{
+		float: left;
+		width: 100%;
+		box-sizing: border-box;
+	}
+	.header{
+		padding: 68px;
+		text-align: center;
+		color: #FFFFFF;
+		float: left;
+	}
+	.nav{
+		background: #333;
+		float: left;
+		position: relative;
+		top: -40px;
+		opacity: 0.5;
+	}
+	.nav a{
+		color: #fff;
+		padding: 10px 75px;
+		display: inline-block;
+	}
+	.nav a:hover{
+		background: #bbb;
+		color: #000;
+	}
+	.container{
+		padding: 68px;
+		float: left;
+	}
+	.container td{
+		text-align: center;
+	}
+	.container img{
+		width: 270px;
+		background-color: white;
+		box-shadow: 5px 5px 3px rgba(50,50,0.4);
+	}
+	.footer{
+		padding: 10px;
+		background: #ccc;
+		text-align:center;
+	}

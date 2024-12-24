@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+<link rel="stylesheet" href="css/index.css">
+<style>
+	.header{
+		background-image:url("img/微信图片_20231216231643.jpg");
+	}
+	@media screen and (max-width:700px) {
+		width: 100%;
+		margin: 0px;
+	}
+</style>
+</head>
+
+<body>
+	<div class="main">
+		<div class="header">
+		  <h1>驯龙高手</h1>
+		  <p><strong><em><a href="‌index.html">
+			  <img src="img/acff2e722ff0f6b4b2583bd8991b3a1.jpg" alt="" width="30"></a></em></strong></p>
+		</div>
+		<div class="nav">
+			<a href="‌index.html">首页</a>
+			<a href="produce.html">制作团队</a>
+		  	<a href="introduce.html">人物介绍</a>
+			<a href="content.html">相关内容</a>
+			<a href="suggestion.html">意见反馈</a>
+			<a></a>
+		</div>
+		<div class="container">
+			<div id="banner">
+				<ul id="imglist">
+					<li><img src="img/滚动图1.jpg" alt=""></li>
+					<li><img src="img/滚动图2.jpg" alt=""></li>
+					<li><img src="img/滚动图3.jpg" alt=""></li>
+					<li><img src="img/滚动图4.jpg" alt=""></li>
+					<li><img src="img/滚动图1.jpg" alt=""></li>
+				</ul>
+				<ul id="icolist">
+					<li>1</li>
+					<li>2</li>
+					<li>3</li>
+					<li>4</li>
+				</ul>
+				<div class="prev">《</div>
+				<div class="next">》</div>
+			</div>
+			<script>
+				var eprev = document.querySelector('.prev');
+				var enext = document.querySelector('.next');
+				var left = 0;
+				var timer;
+				run();
+				function run(){
+					if (left <= -3200){
+						left = 0;
+					}
+					imglist.style.marginLeft = left + 'px';
+					var n =(left % 800 == 0) ? n = 1200 : n = 10;
+					left -= 10;
+					timer = setTimeout(run,n);
+				}
+				function imgchange(n){
+					let lt = - (n*800);
+					imglist.style.marginLeft = lt + 'px';
+					left = lt;
+				}
+				eprev.onclick = function(){
+					let prevgo = Math.floor(-left / 800) - 1;
+					if (prevgo == -1) {
+						prevgo = 3;
+					}
+					imgchange(prevgo);
+				}
+				enext.onclick = function(){
+					let nextgo = Math.floor(-left / 800) + 1;
+					if (nextgo == 4) {
+						nextgo = 0;
+					}
+					imgchange(nextgo);
+				}
+			</script>
+			<div class="lside">
+				<h2>&nbsp;&nbsp;认识无牙仔</h2>
+				<p><br>&nbsp;&nbsp;&nbsp;进入这个视频和我一起认识一下无牙仔<br><br><br>
+						&nbsp;<a href="https://www.bilibili.com/video/BV1Vb411J7hT?p=1&vd_source=024d564069dcc44f5f443e05b09b842f">
+						<img src="img/屏幕截图 2023-12-18 222801.png" alt=""></a>
+				</p>
+			</div>
+			<div class="rside">
+				<h2>&nbsp;&nbsp;驯龙高手配乐</h2>
+				<p><br>&nbsp;&nbsp;&nbsp;《驯龙高手》幕后三维动画制作特辑<br><br><br>&nbsp;
+						<a href="https://www.bilibili.com/video/BV14s411879H/?spm_id_from=333.337.search-card.all.click&vd_source=024d564069dcc44f5f443e05b09b842f">
+						<img src="img/屏幕截图 2023-12-18 234227.png" alt="">
+						</a>
+				</p>
+			</div>
+			<div class="content">
+				<h2>&nbsp;&nbsp;无牙仔试镜</h2>
+				<p><br>&nbsp;&nbsp;&nbsp;《驯龙高手3》最新幕后花絮：无牙仔试镜片段<br><br><br>&nbsp;
+						<a href="https://www.bilibili.com/video/BV1ut411i7Be/?spm_id_from=333.337.search-card.all.click&vd_source=024d564069dcc44f5f443e05b09b842f">
+						<img src="img/屏幕截图 2023-12-18 230744.png" alt="">
+						</a>
+				</p>
+				<br>
+				<br>
+				<br>
+				<br>
+				<br>
+			</div>
+		</div>
+		<div class="footer">
+			<p>2340709202 &nbsp;&nbsp;吴必炜<br>计算机科学与技术专业</p>
+		</div>
+	</div>
+</body>
+</html>
