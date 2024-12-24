@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>登录界面</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .login-container {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 300px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        button {
+            width: 100%;
+            padding: 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        .register-link {
+            text-align: center;
+            margin-top: 15px;
+        }
+        #captcha-display {
+            display: inline-block;
+            padding: 5px 10px;
+            background: #f0f0f0;
+            margin: 5px 10px;
+            font-family: monospace;
+            letter-spacing: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>用户登录</h2>
+        <form id="loginForm" onsubmit="return handleLogin(event)">
+            <div class="form-group">
+                <label for="username">用户名:</label>
+                <input type="text" id="username" required value="123456">
+            </div>
+            <div class="form-group">
+                <label for="password">密码:</label>
+                <input type="password" id="password" required value="Ab123456">
+            </div>
+            <div class="form-group">
+                <label for="captcha">验证码:</label>
+                <input type="text" id="captcha" required>
+                <div>
+                    <span id="captcha-display"></span>
+                    <button type="button" onclick="refreshCaptcha()">刷新</button>
+                </div>
+            </div>
+            <button type="submit">登录</button>
+        </form>
+        <div class="register-link">
+            <a href="register.html">没有账号？立即注册</a>
+        </div>
+    </div>
+
+    <script>
+        // 存储用户数据
+        function getUsers() {
+            const users = localStorage.getItem('users');
+            return users ? JSON.parse(users) : [];
+        }
+
+        // 生成验证码
+        function generateCaptcha() {
+            return Math.random().toString(36).substring(2, 8);
+        }
+
+        // 刷新验证码
+        function refreshCaptcha() {
+            const captcha = generateCaptcha();
+            document.getElementById('captcha-display').innerText = captcha;
+            sessionStorage.setItem('captcha', captcha);
+        }
+
+        // 登录处理
+        function handleLogin(event) {
+            event.preventDefault();
+            
+            const username = document.getElementById('username').value;
+            const password = document.getElementById('password').value;
+            const captchaInput = document.getElementById('captcha').value;
+            const captchaStored = sessionStorage.getItem('captcha');
+
+            // 验证码检查
+            if (captchaInput !== captchaStored) {
+                alert('验证码错误');
+                refreshCaptcha();
+                return false;
+            }
+
+            // 用户验证
+            const users = getUsers();
+            const user = users.find(u => u.username === username && u.password === password);
+
+            if (user) {
+                alert('登录成功！');
+                window.location.href = '‌index.html';
+            } else {
+                alert('用户名或密码错误！');
+                refreshCaptcha();
+            }
+            return false;
+        }
+
+        // 页面加载时生成验证码
+        window.onload = refreshCaptcha;
+    </script>
+</body>
+</html>
